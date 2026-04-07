@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom colors */
+  --color-dark: #0a0a0a;
+  --color-dark-100: #0f0f0f;
+  --color-dark-200: #161616;
+  --color-dark-300: #1e1e1e;
+  --color-dark-400: #2a2a2a;
+  --color-dark-500: #3a3a3a;
+  --color-light: #f8f7f4;
+  --color-light-200: #e8e4de;
+  --color-light-300: #c4bdb4;
+  --color-muted: #78716c;
+  --color-accent: #c8a96e;
+  --color-accent-light: #e4d0a8;
+  --color-accent-dark: #9a7d4a;
+
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-cormorant);
+}
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #f8f7f4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #c8a96e33;
+  color: #f8f7f4;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #c8a96e; }
+
+/* ── Buttons ────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: #c8a96e;
+  color: #0a0a0a;
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+}
+.btn-primary:hover { background: #e4d0a8; transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: #f8f7f4;
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(248, 247, 244, 0.3);
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+}
+.btn-outline:hover {
+  border-color: #f8f7f4;
+  background: rgba(248, 247, 244, 0.05);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: #c8a96e;
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #c8a96e;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  outline: none;
+}
+.btn-ghost:hover { background: #c8a96e; color: #0a0a0a; transform: translateY(-1px); }
+
+/* ── Form inputs ────────────────────────── */
+.form-input {
+  width: 100%;
+  padding: 0.875rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(248, 247, 244, 0.2);
+  color: #f8f7f4;
+  font-family: var(--font-inter), Arial, sans-serif;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form-input::placeholder { color: rgba(248, 247, 244, 0.3); }
+.form-input:focus { border-bottom-color: #c8a96e; }
+.form-input option { background: #161616; color: #f8f7f4; }
+
+/* ── Utilities ──────────────────────────── */
+.section-divider {
+  width: 2.5rem;
+  height: 1px;
+  background: #c8a96e;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.animate-pulse-slow { animation: pulse-slow 2s ease-in-out infinite; }
+
+.prose-dark p { color: #c4bdb4; line-height: 1.8; margin-bottom: 1.25rem; }
+.prose-dark h2, .prose-dark h3 { color: #f8f7f4; margin-bottom: 1rem; }
