@@ -47,21 +47,21 @@ export default function ContactPage() {
               {[
                 {
                   label: 'Studio',
-                  lines: ['901, BKC Tower A', 'Bandra Kurla Complex', 'Mumbai 400 051, India'],
+                  lines: ['14, New Kumbharwada', 'Bharat Kunj', 'Opp. Shradha Dairy Farm, Canal Road', 'Rajkot 360 001, India'],
                 },
                 {
                   label: 'Phone',
-                  lines: ['+91 22 1234 5678'],
-                  href: 'tel:+912212345678',
+                  lines: ['+91 97378 89882'],
+                  href: 'tel:+919737889882',
                 },
                 {
                   label: 'Email',
-                  lines: ['hello@archstudio.in'],
-                  href: 'mailto:hello@archstudio.in',
+                  lines: ['bhumintank@gmail.com'],
+                  href: 'mailto:bhumintank@gmail.com',
                 },
                 {
                   label: 'Hours',
-                  lines: ['Monday to Friday', '9:00 am — 7:00 pm IST'],
+                  lines: ['Monday to Friday', '10:00 am — 7:00 pm IST'],
                 },
               ].map((item, i) => (
                 <AnimatedSection key={item.label} direction="left" delay={i * 0.08}>
@@ -132,8 +132,8 @@ export default function ContactPage() {
                 a: 'Depending on scale and complexity, a residential project from initial concept to move-in typically takes 18–30 months. We provide a detailed programme at the outset of every project.',
               },
               {
-                q: 'Do you work outside Mumbai?',
-                a: 'Yes. We have completed projects across India — in Delhi, Bangalore, Hyderabad, Udaipur, and Goa. We also take on international commissions for the right projects.',
+                q: 'Do you work outside Rajkot?',
+                a: 'Yes. We have completed projects across India — in Delhi, Bangalore, Hyderabad, Udaipur, Mumbai, and Goa. We also take on international commissions for the right projects.',
               },
               {
                 q: 'What is your minimum project budget?',

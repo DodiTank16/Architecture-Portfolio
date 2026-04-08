@@ -80,7 +80,7 @@ export default function HomePage() {
         <div className="relative z-10 flex h-full items-end pb-32 px-6 lg:px-16">
           <div ref={headlineRef} className="max-w-2xl">
             <p className="text-accent text-[11px] tracking-[0.4em] uppercase font-sans mb-6">
-              Architecture Studio &mdash; Est. 2006
+              Architecture Studio &mdash; Est. 2025
             </p>
             <h1 className="font-serif text-5xl sm:text-6xl lg:text-[5.5rem] leading-[0.92] text-light mb-6">
               Designing Spaces
