@@ -13,29 +13,29 @@ export const metadata: Metadata = {
 
 const team = [
   {
-    name: 'Arjun Mehta',
+    name: 'Bhumin Tank',
     role: 'Founding Principal',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
-    bio: 'With over 22 years of practice across India and Europe, Arjun brings a deep commitment to contextual design and technical excellence.',
+    bio: 'With over 4 years of practice across India and Europe, Bhumin brings a deep commitment to contextual design and technical excellence.',
   },
-  {
-    name: 'Priya Kapoor',
-    role: 'Director, Interiors',
-    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b602?auto=format&fit=crop&w=400&q=80',
-    bio: 'Priya leads our interiors practice with a focus on bespoke materiality, artisan collaboration, and spaces that feel both curated and lived-in.',
-  },
-  {
-    name: 'Rohan Sharma',
-    role: 'Senior Associate',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80',
-    bio: 'Rohan specialises in computational design and sustainable building systems, ensuring our buildings perform as beautifully as they look.',
-  },
-  {
-    name: 'Ananya Singh',
-    role: 'Design Lead',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80',
-    bio: 'Ananya drives concept development across multiple project types, with a particular passion for residential architecture and urban housing.',
-  },
+  // {
+  //   name: 'Priya Kapoor',
+  //   role: 'Director, Interiors',
+  //   image: 'https://images.unsplash.com/photo-1494790108755-2616b612b602?auto=format&fit=crop&w=400&q=80',
+  //   bio: 'Priya leads our interiors practice with a focus on bespoke materiality, artisan collaboration, and spaces that feel both curated and lived-in.',
+  // },
+  // {
+  //   name: 'Rohan Sharma',
+  //   role: 'Senior Associate',
+  //   image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80',
+  //   bio: 'Rohan specialises in computational design and sustainable building systems, ensuring our buildings perform as beautifully as they look.',
+  // },
+  // {
+  //   name: 'Ananya Singh',
+  //   role: 'Design Lead',
+  //   image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80',
+  //   bio: 'Ananya drives concept development across multiple project types, with a particular passion for residential architecture and urban housing.',
+  // },
 ];
 
 const awards = [

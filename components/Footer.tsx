@@ -29,11 +29,11 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2 group mb-6 w-fit">
               <div className="w-8 h-8 border border-accent flex items-center justify-center group-hover:bg-accent transition-colors duration-300">
                 <span className="text-accent group-hover:text-dark text-xs font-serif font-bold transition-colors duration-300">
-                  A
+                  TAS
                 </span>
               </div>
               <span className="font-sans text-light text-sm tracking-[0.25em] uppercase font-medium">
-                Arch Studio
+                Architecture Studio
               </span>
             </Link>
             <p className="text-light-300 text-sm leading-relaxed max-w-xs mb-8">
@@ -80,16 +80,16 @@ export default function Footer() {
         {/* Contact strip */}
         <div className="border-t border-dark-400 pt-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex flex-col sm:flex-row gap-6 text-sm text-muted">
-            <a href="mailto:hello@archstudio.in" className="hover:text-light-300 transition-colors duration-300">
-              hello@archstudio.in
+            <a href="mailto:bhumintank@gmail.com" className="hover:text-light-300 transition-colors duration-300">
+              bhumintank@gmail.com
             </a>
-            <a href="tel:+912212345678" className="hover:text-light-300 transition-colors duration-300">
-              +91 22 1234 5678
+            <a href="tel:+919737889882" className="hover:text-light-300 transition-colors duration-300">
+              +91 97378 89882
             </a>
-            <span>Mumbai, Maharashtra</span>
+            <span>Rajkot, Gujarat, India</span>
           </div>
           <p className="text-muted text-xs">
-            © {new Date().getFullYear()} Arch Studio. All rights reserved.
+            © {new Date().getFullYear()} TAS Architecture Studio. All rights reserved.
           </p>
         </div>
       </div>

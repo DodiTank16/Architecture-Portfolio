@@ -8,8 +8,8 @@ export const metadata: Metadata = {
     'Book a consultation with Arch Studio. Fill in the form or reach us via WhatsApp or email.',
 };
 
-const WHATSAPP_NUMBER = '919904777068';
-const whatsappMsg = `Hello! I'm interested in discussing an architecture project with Arch Studio.`;
+const WHATSAPP_NUMBER = '919737889882';
+const whatsappMsg = `Hello! I'm interested in discussing an architecture project with TAS Architecture Studio.`;
 
 export default function ContactPage() {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMsg)}`;

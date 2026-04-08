@@ -54,11 +54,11 @@ export default function Navbar() {
             >
               <div className="w-8 h-8 border border-accent flex items-center justify-center group-hover:bg-accent transition-colors duration-300">
                 <span className="text-accent group-hover:text-dark text-xs font-serif font-bold transition-colors duration-300">
-                  A
+                  TAS
                 </span>
               </div>
               <span className="font-sans text-light text-sm tracking-[0.25em] uppercase font-medium">
-                Arch Studio
+                Architecture Studio
               </span>
             </Link>
 
