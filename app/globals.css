@@ -26,6 +26,71 @@
   --foreground: #f8f7f4;
 }
 
+/* ── Theme transition ───────────────────── */
+/* Briefly enabled during theme switch to smoothly interpolate all colors */
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition:
+    background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    fill 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ── Light theme overrides ───────────────── */
+[data-theme='light'] {
+  --background: #f5f3ef;
+  --foreground: #1a1917;
+
+  /* Invert the dark/light palette so Tailwind utilities flip automatically */
+  --color-dark:     #f5f3ef;
+  --color-dark-100: #ede9e3;
+  --color-dark-200: #e0dbd3;
+  --color-dark-300: #ccc5bb;
+  --color-dark-400: #b8b0a5;
+  --color-dark-500: #9c9389;
+  --color-light:     #1a1917;
+  --color-light-200: #2e2c29;
+  --color-light-300: #5a5650;
+  --color-muted:     #78716c;
+}
+
+[data-theme='light'] body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+[data-theme='light'] ::-webkit-scrollbar-track { background: #ede9e3; }
+[data-theme='light'] ::-webkit-scrollbar-thumb { background: #b8b0a5; }
+[data-theme='light'] ::-webkit-scrollbar-thumb:hover { background: #c8a96e; }
+
+[data-theme='light'] ::selection {
+  background-color: #c8a96e55;
+  color: #1a1917;
+}
+
+[data-theme='light'] .btn-outline {
+  color: #1a1917;
+  border-color: rgba(26, 25, 23, 0.3);
+}
+[data-theme='light'] .btn-outline:hover {
+  border-color: #1a1917;
+  background: rgba(26, 25, 23, 0.05);
+}
+
+[data-theme='light'] .form-input {
+  color: #1a1917;
+  border-bottom-color: rgba(26, 25, 23, 0.2);
+}
+[data-theme='light'] .form-input::placeholder { color: rgba(26, 25, 23, 0.35); }
+
+[data-theme='light'] .prose-dark p { color: #5a5650; }
+[data-theme='light'] .prose-dark h2,
+[data-theme='light'] .prose-dark h3 { color: #1a1917; }
+
 *,
 *::before,
 *::after {

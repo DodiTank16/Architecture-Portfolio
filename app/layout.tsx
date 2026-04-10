@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SmoothScroll from '@/components/SmoothScroll';
+import ThemeProvider from '@/components/ThemeProvider';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -54,12 +55,22 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Anti-flash: set theme before first paint */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');var p=window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t||p);}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body className="bg-dark text-light antialiased">
-        <SmoothScroll>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </SmoothScroll>
+        <ThemeProvider>
+          <SmoothScroll>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </SmoothScroll>
+        </ThemeProvider>
       </body>
     </html>
   );
