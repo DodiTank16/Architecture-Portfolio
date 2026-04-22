@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
 import { services, processSteps } from '@/lib/services';
@@ -13,8 +14,18 @@ export default function ServicesPage() {
   return (
     <>
       {/* ── Hero ─────────────────────────── */}
-      <section className="pt-40 pb-20 lg:py-48 px-6 lg:px-16 bg-dark border-b border-dark-400">
-        <div className="mx-auto max-w-7xl">
+      <section className="pt-40 pb-20 lg:py-48 px-6 lg:px-16 bg-dark border-b border-dark-400 relative overflow-hidden">
+        {/* Background texture */}
+        <div className="absolute inset-0 opacity-30">
+          <Image
+            src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1920&q=80"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+        </div>
+        <div className="relative mx-auto max-w-7xl">
           <AnimatedSection>
             <p className="text-accent text-[11px] tracking-[0.4em] uppercase font-sans mb-5">
               What We Offer

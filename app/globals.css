@@ -42,20 +42,28 @@ html.theme-transitioning *::after {
 
 /* ── Light theme overrides ───────────────── */
 [data-theme='light'] {
-  --background: #f5f3ef;
-  --foreground: #1a1917;
+  --background: #F7F5F0;
+  --foreground: #1A1714;
 
-  /* Invert the dark/light palette so Tailwind utilities flip automatically */
-  --color-dark:     #f5f3ef;
-  --color-dark-100: #ede9e3;
-  --color-dark-200: #e0dbd3;
-  --color-dark-300: #ccc5bb;
-  --color-dark-400: #b8b0a5;
-  --color-dark-500: #9c9389;
-  --color-light:     #1a1917;
-  --color-light-200: #2e2c29;
-  --color-light-300: #5a5650;
-  --color-muted:     #78716c;
+  /*
+   * Premium warm palette — parchment whites + rich ink tones.
+   * Each step is slightly deeper / more saturated for strong hierarchy.
+   */
+  --color-dark:     #F7F5F0;   /* page background — warm parchment */
+  --color-dark-100: #EFECE4;   /* navbar / footer surface */
+  --color-dark-200: #E3DECE;   /* card / panel surface */
+  --color-dark-300: #CEC6B8;   /* dividers, soft borders */
+  --color-dark-400: #B2A99A;   /* strong borders, icon strokes */
+  --color-dark-500: #908780;   /* disabled, placeholder surfaces */
+  --color-light:     #1A1714;   /* primary text — rich printing ink */
+  --color-light-200: #2E2B25;   /* secondary headings */
+  --color-light-300: #524D45;   /* body / tertiary text */
+  --color-muted:     #4A4540;   /* captions, meta — darkened for WCAG AA on all light surfaces */
+
+  /* Gold accent tones darkened so they stay readable on parchment backgrounds.
+     In dark mode these are bright/pale; in light mode they must have ≥4.5:1 contrast. */
+  --color-accent:       #6B5120; /* ~6.5:1 on parchment — eyebrow labels, nav active, icons */
+  --color-accent-light: #8B6B2E; /* ~4.7:1 on parchment — italic hero/heading decorations  */
 }
 
 [data-theme='light'] body {
@@ -63,33 +71,78 @@ html.theme-transitioning *::after {
   color: var(--foreground);
 }
 
-[data-theme='light'] ::-webkit-scrollbar-track { background: #ede9e3; }
-[data-theme='light'] ::-webkit-scrollbar-thumb { background: #b8b0a5; }
-[data-theme='light'] ::-webkit-scrollbar-thumb:hover { background: #c8a96e; }
+/* ── Refined scrollbar ─────────────────────── */
+[data-theme='light'] ::-webkit-scrollbar-track { background: #EFECE4; }
+[data-theme='light'] ::-webkit-scrollbar-thumb { background: #C8BFB0; border-radius: 2px; }
+[data-theme='light'] ::-webkit-scrollbar-thumb:hover { background: #C8A96E; }
 
+/* ── Rich gold selection ───────────────────── */
 [data-theme='light'] ::selection {
-  background-color: #c8a96e55;
-  color: #1a1917;
+  background-color: rgba(200, 169, 110, 0.28);
+  color: #1A1714;
 }
 
+/* ── Navbar — warm glass + premium shadow when scrolled ── */
+[data-theme='light'] nav.backdrop-blur-md {
+  background: rgba(247, 245, 240, 0.96) !important;
+  box-shadow: 0 1px 0 rgba(200, 169, 110, 0.18), 0 4px 32px rgba(26, 21, 14, 0.07);
+  border-bottom-color: rgba(200, 169, 110, 0.18) !important;
+}
+
+/* ── Buttons ───────────────────────────────── */
+/* Primary — warm gold glow for depth */
+[data-theme='light'] .btn-primary {
+  box-shadow: 0 2px 12px rgba(200, 169, 110, 0.3);
+}
+[data-theme='light'] .btn-primary:hover {
+  box-shadow: 0 4px 24px rgba(200, 169, 110, 0.42);
+}
+
+/* Outline — gold accent on hover instead of flat black */
 [data-theme='light'] .btn-outline {
-  color: #1a1917;
-  border-color: rgba(26, 25, 23, 0.3);
+  color: #1A1714;
+  border-color: rgba(26, 21, 20, 0.22);
 }
 [data-theme='light'] .btn-outline:hover {
-  border-color: #1a1917;
-  background: rgba(26, 25, 23, 0.05);
+  border-color: #C8A96E;
+  background: rgba(200, 169, 110, 0.06);
+  box-shadow: 0 4px 16px rgba(200, 169, 110, 0.14);
 }
 
+/* Ghost */
+[data-theme='light'] .btn-ghost:hover {
+  box-shadow: 0 4px 16px rgba(200, 169, 110, 0.22);
+}
+
+/* ── Form inputs ───────────────────────────── */
 [data-theme='light'] .form-input {
-  color: #1a1917;
-  border-bottom-color: rgba(26, 25, 23, 0.2);
+  color: #1A1714;
+  border-bottom-color: rgba(26, 21, 14, 0.18);
 }
-[data-theme='light'] .form-input::placeholder { color: rgba(26, 25, 23, 0.35); }
+[data-theme='light'] .form-input::placeholder { color: rgba(26, 21, 14, 0.3); }
+[data-theme='light'] .form-input:focus { border-bottom-color: #C8A96E; }
+[data-theme='light'] .form-input option { background: #F7F5F0; color: #1A1714; }
 
-[data-theme='light'] .prose-dark p { color: #5a5650; }
+/* ── Section divider — subtle gradient shimmer ── */
+[data-theme='light'] .section-divider {
+  background: linear-gradient(90deg, #C8A96E 0%, #E4D0A0 100%);
+}
+
+/* ── Prose ─────────────────────────────────── */
+[data-theme='light'] .prose-dark p { color: #524D45; }
 [data-theme='light'] .prose-dark h2,
-[data-theme='light'] .prose-dark h3 { color: #1a1917; }
+[data-theme='light'] .prose-dark h3 { color: #1A1714; }
+
+/* ── Card elevation — lifted white surface with warm shadow ── */
+[data-theme='light'] .card-surface,
+[data-theme='light'] [class*='bg-dark-200'] {
+  box-shadow: 0 2px 20px rgba(26, 21, 14, 0.06), 0 1px 4px rgba(26, 21, 14, 0.04);
+}
+
+/* ── Footer border — gold hint ──────────────── */
+[data-theme='light'] footer {
+  border-top-color: rgba(200, 169, 110, 0.2) !important;
+}
 
 *,
 *::before,

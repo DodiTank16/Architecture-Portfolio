@@ -52,7 +52,7 @@ export default function AboutPage() {
       {/* ── Hero ────────────────────────── */}
       <section className="pt-40 pb-20 lg:py-48 px-6 lg:px-16 bg-dark relative overflow-hidden">
         {/* Background texture */}
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-30">
           <Image
             src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80"
             alt=""

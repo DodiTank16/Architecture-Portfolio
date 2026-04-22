@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Metadata } from 'next';
 import ProjectCard from '@/components/ProjectCard';
@@ -17,8 +18,18 @@ export default function ProjectsPage() {
   return (
     <>
       {/* Header */}
-      <section className="pt-40 pb-20 px-6 lg:px-10 bg-dark border-b border-dark-400">
-        <div className="mx-auto max-w-7xl">
+      <section className="pt-40 pb-20 px-6 lg:px-10 bg-dark border-b border-dark-400 relative overflow-hidden">
+        {/* Background texture */}
+        <div className="absolute inset-0 opacity-30">
+          <Image
+            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+        </div>
+        <div className="relative mx-auto max-w-7xl">
           <AnimatedSection>
             <p className="text-accent text-[11px] tracking-[0.4em] uppercase font-sans mb-5">
               Our Portfolio
