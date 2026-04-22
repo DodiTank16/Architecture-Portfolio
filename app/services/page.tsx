@@ -41,7 +41,7 @@ export default function ServicesPage() {
                 id={svc.id}
                 className="scroll-mt-24"
               >
-                <AnimatedSection delay={i * 0.1}>
+                <AnimatedSection delay={Math.min(i * 0.08, 0.24)}>
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 py-16 lg:py-24 group">
                     {/* Number + title */}
                     <div>
@@ -95,7 +95,7 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-dark-400">
             {processSteps.map((step, i) => (
-              <AnimatedSection key={step.number} delay={i * 0.1} className="bg-dark-200 p-8 lg:p-10 hover:bg-dark-300 transition-colors duration-500">
+              <AnimatedSection key={step.number} delay={Math.min(i * 0.08, 0.24)} className="bg-dark-200 p-8 lg:p-10 hover:bg-dark-300 transition-colors duration-500">
                 <span className="font-serif text-5xl text-dark-500 mb-6 block">{step.number}</span>
                 <h3 className="font-serif text-2xl text-light mb-4">{step.title}</h3>
                 <p className="text-muted text-sm leading-relaxed">{step.description}</p>

@@ -19,10 +19,10 @@ export default function AnimatedSection({
   amount = 0.15,
 }: AnimatedSectionProps) {
   const variants: Record<string, { opacity: number; x?: number; y?: number }> = {
-    up:    { opacity: 0, y: 40 },
-    down:  { opacity: 0, y: -40 },
-    left:  { opacity: 0, x: 40 },
-    right: { opacity: 0, x: -40 },
+    up:    { opacity: 0, y: 24 },
+    down:  { opacity: 0, y: -24 },
+    left:  { opacity: 0, x: 24 },
+    right: { opacity: 0, x: -24 },
     none:  { opacity: 0 },
   };
 
@@ -32,7 +32,7 @@ export default function AnimatedSection({
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, amount }}
       transition={{
-        duration: 0.9,
+        duration: 0.55,
         delay,
         ease: [0.22, 1, 0.36, 1],
       }}
